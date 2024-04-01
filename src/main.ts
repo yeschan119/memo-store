@@ -1,14 +1,27 @@
 import memo from "./data/memo.json"
 
-var reset_btn = document.querySelector('.reset-btn');
+const dataList = Object.keys(memo);
 
-reset_btn?.addEventListener('click', function(){
-  reset_btn!.parentNode!.querySelector('input')!.value = "";
+var login = $('.login-btn');
+var login_key = (<HTMLInputElement>document.querySelector(".modal-id")).value;
+var login_pw = (<HTMLInputElement>document.querySelector(".modal-pw")).value;
+
+login.on('click', function() {
+  var login_key = (<HTMLInputElement>document.querySelector(".modal-id")).value;
+  var login_pw = (<HTMLInputElement>document.querySelector(".modal-pw")).value;
+  if (login_key && login_pw &&
+      memo[login_key][0] == login_pw || memo[login_key][1] == login_pw) {
+    $('.black-bg').addClass('hide-modal');
+    $('.main-page').removeClass('hide-modal');
+  }
 })
 
-//test data
-// const dataList = ["빨간색", "파란색", "노란색", "검정색", "kokomo"];
-const dataList = Object.keys(memo);
+var reset_btn = document.querySelector('.reset-btn');
+reset_btn?.addEventListener('click', function(){
+  reset_btn!.parentNode!.querySelector('input')!.value = "";
+  (<HTMLInputElement>document.querySelector(".result-id")).value = "";
+  (<HTMLInputElement>document.querySelector(".result-pw")).value = "";
+})
 
 const $search = (<HTMLInputElement>document.querySelector(".search-text"));
 const $autoComplete = document.querySelector(".autocomplete");
@@ -37,7 +50,10 @@ if ($search) {
   
       // ENTER KEY
       case 13:
-        (<HTMLInputElement>document.querySelector(".search-text")).value = matchDataList[nowIndex] || "";
+        const result = matchDataList[nowIndex];
+        (<HTMLInputElement>document.querySelector(".search-text")).value = result || "";
+        (<HTMLInputElement>document.querySelector(".result-id")).value = memo[result][0] || "";
+        (<HTMLInputElement>document.querySelector(".result-pw")).value = memo[result][1] || "";
         // 초기화
         nowIndex = 0;
         matchDataList.length = 0;

@@ -14,25 +14,52 @@
         <!-- font Awesome -->
         <script src="https://kit.fontawesome.com/7afe644fe9.js" crossorigin="anonymous"></script>
         <script type="module" src="src/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body>
-        <header class="header">
-            <div class="header__title">
-                <h1>SEARCH</h1>
+        <div class="black-bg">
+            <div class="white-bg">
+                <div class="modal">
+                    <input class="modal-id" type="text" placeholder="ID">
+                </div>
+                <div class="modal">
+                    <input class="modal-pw" type="text" placeholder="PW">
+                </div>
+                <button class="login-btn">login</button>
             </div>
-        </header>
-        <section class="search">
-            <!-- <form class="search-box" action="https://www.google.com/search" method="get"> -->
-            <div class="search-box">
-                <button class="search-btn" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <input class="search-text" type="text" name="q" placeholder="search" autocomplete="off">
-                <button class="reset-btn" type="button">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="autocomplete"></div>
+        </div>
+        <main class="main-page hide-modal">
+            <header class="header">
+                <div class="search-title">
+                    <h1>SEARCH</h1>
+                </div>
+            </header>
+            <section class="search">
+                <!-- <form class="search-box" action="https://www.google.com/search" method="get"> -->
+                <div class="search-box">
+                    <button class="search-btn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input class="search-text" type="text" placeholder="search" autocomplete="off">
+                    <button class="reset-btn" type="button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="autocomplete"></div>
+            </section>
+            <section class="result">
+                <div class="result-title">
+                    <h2>RESULT</h2>
+                </div>
+                <input class="result-id" type="text" placeholder="ID" autocomplete="off">
+                <input class="result-pw" type="text" placeholder="PASSWORD" autocomplete="off">
+            </section>
+        </main>
+        <section class="background-img">
+            <img class = "ggoongee" src="img/ggoongee.png" alt="꿍이 이미지">
         </section>
+        
     </body>
 </html>
