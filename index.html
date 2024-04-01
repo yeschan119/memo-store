@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <!--internet explore browser option X-UA : IE9 주소바에 호환성 버튼 안보이게, IE=edge Edge 렌더링 엔진 사용-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!--사용자의 device(viewport) 크기에 맞게 컨텐츠 표기-->
+        <meta name="viewport" content="width=device-width", initial-scale="1.0"/>
+        <!--SEO-->
+        <title>eungchan&#39;s Memo Store & Search</title>
+        <meta name="description" content="memo store & search application"/>
+        <meta name="author" content="Eungchan(Kane)" />
+        <link rel="stylesheet" href="css/style.css">
+        <!-- font Awesome -->
+        <script src="https://kit.fontawesome.com/7afe644fe9.js" crossorigin="anonymous"></script>
+        <script type="module" src="src/main.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__title">
+                <h1>SEARCH</h1>
+            </div>
+        </header>
+        <section class="search">
+            <form class="search-box" action="https://www.google.com/search" method="get">
+                <button class="search-btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input class="search-text" type="text" name="q" placeholder="search" autocomplet="off">
+                <button class="reset-btn" type="button">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </form>
+            <div class="autocomplete"></div>
+        </section>
+    </body>
+</html>
