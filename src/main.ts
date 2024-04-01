@@ -1,3 +1,5 @@
+import memo from "./data/memo.json"
+
 var reset_btn = document.querySelector('.reset-btn');
 
 reset_btn?.addEventListener('click', function(){
@@ -5,7 +7,8 @@ reset_btn?.addEventListener('click', function(){
 })
 
 //test data
-const dataList = ["빨간색", "파란색", "노란색", "검정색", "kokomo"];
+// const dataList = ["빨간색", "파란색", "노란색", "검정색", "kokomo"];
+const dataList = Object.keys(memo);
 
 const $search = (<HTMLInputElement>document.querySelector(".search-text"));
 const $autoComplete = document.querySelector(".autocomplete");

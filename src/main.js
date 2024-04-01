@@ -1,9 +1,11 @@
+import memo from "./data/memo.json" with{type: "json"};
 var reset_btn = document.querySelector('.reset-btn');
 reset_btn === null || reset_btn === void 0 ? void 0 : reset_btn.addEventListener('click', function () {
     reset_btn.parentNode.querySelector('input').value = "";
 });
 //test data
-var dataList = ["빨간색", "파란색", "노란색", "검정색", "kokomo"];
+// const dataList = ["빨간색", "파란색", "노란색", "검정색", "kokomo"];
+var dataList = Object.keys(memo);
 var $search = document.querySelector(".search-text");
 var $autoComplete = document.querySelector(".autocomplete");
 var nowIndex = 0;
@@ -46,3 +48,4 @@ if ($search) {
             .join("");
     };
 }
+var test = '';
