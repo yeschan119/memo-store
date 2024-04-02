@@ -2,17 +2,25 @@ import memo from "./data/memo.json"
 
 const dataList = Object.keys(memo);
 
-var login = $('.login-btn');
-var login_key = (<HTMLInputElement>document.querySelector(".modal-id")).value;
-var login_pw = (<HTMLInputElement>document.querySelector(".modal-pw")).value;
-
-login.on('click', function() {
-  var login_key = (<HTMLInputElement>document.querySelector(".modal-id")).value;
-  var login_pw = (<HTMLInputElement>document.querySelector(".modal-pw")).value;
+$('.login-btn').on('click', function() {
+  var login_key = (<HTMLInputElement>document.querySelector(".login-id")).value;
+  var login_pw = (<HTMLInputElement>document.querySelector(".login-pw")).value;
   if (login_key && login_pw &&
       memo[login_key][0] == login_pw || memo[login_key][1] == login_pw) {
-    $('.black-bg').addClass('hide-modal');
+    $('.login-bg').addClass('hide-modal');
     $('.main-page').removeClass('hide-modal');
+  }
+})
+
+$('.login-pw-btn').on("click", function() {
+  var pw_type = (<HTMLInputElement>document.querySelector(".login-pw")).type;
+  if (pw_type == "password") {
+    (<HTMLInputElement>document.querySelector(".login-pw")).type = "text";
+    $('#pw-peek').attr("class", "fa-regular fa-eye-slash");
+  }
+  else {
+    (<HTMLInputElement>document.querySelector(".login-pw")).type = "password";
+    $('#pw-peek').attr("class", "fa-regular fa-eye");
   }
 })
 

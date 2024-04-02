@@ -1,15 +1,23 @@
 import memo from "./data/memo.json" with {type:"json"};
 var dataList = Object.keys(memo);
-var login = $('.login-btn');
-var login_key = document.querySelector(".modal-id").value;
-var login_pw = document.querySelector(".modal-pw").value;
-login.on('click', function () {
-    var login_key = document.querySelector(".modal-id").value;
-    var login_pw = document.querySelector(".modal-pw").value;
+$('.login-btn').on('click', function () {
+    var login_key = document.querySelector(".login-id").value;
+    var login_pw = document.querySelector(".login-pw").value;
     if (login_key && login_pw &&
         memo[login_key][0] == login_pw || memo[login_key][1] == login_pw) {
-        $('.black-bg').addClass('hide-modal');
+        $('.login-bg').addClass('hide-modal');
         $('.main-page').removeClass('hide-modal');
+    }
+});
+$('.login-pw-btn').on("click", function () {
+    var pw_type = document.querySelector(".login-pw").type;
+    if (pw_type == "password") {
+        document.querySelector(".login-pw").type = "text";
+        $('#pw-peek').attr("class", "fa-regular fa-eye-slash");
+    }
+    else {
+        document.querySelector(".login-pw").type = "password";
+        $('#pw-peek').attr("class", "fa-regular fa-eye");
     }
 });
 var reset_btn = document.querySelector('.reset-btn');
