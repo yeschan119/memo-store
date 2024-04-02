@@ -10,6 +10,7 @@
 --color-white: rgb(256, 256, 256);
 
 --size-max-width : 490px;
+--size-max-hight : 300px;
 }
 
 html {
@@ -56,6 +57,7 @@ h1,h2,h3,p,ul {
 
 .login-page {
     max-width: var(--size-max-width);
+    max-height: var(--size-max-hight);
     position: relative;
     top: 10%;
     left: 35%;
@@ -80,9 +82,9 @@ h1,h2,h3,p,ul {
 }
 
 .login-btn {
-    position: relative;
+    position: absolute;
     border: none;
-    top: 10%;
+    top: 70%;
     left: 30%;
     height: 10%;
     width: 30%;
@@ -95,7 +97,9 @@ h1,h2,h3,p,ul {
 }
 
 .login-id, .login-pw {
+    position : absolute;
     margin-left: .5rem;
+    top: 10%;
     left: 7px;
     border: none;
     background: none;
@@ -109,10 +113,10 @@ h1,h2,h3,p,ul {
 }
 
 .login-pw-btn {
-    position: relative;
+    position: absolute;
     border: none;
-    bottom: 100%;
-    left: 82%;
+    top: 30%;
+    left: 85%;
     height: 40%;
     width: 10%;
     background: none;
@@ -121,7 +125,6 @@ h1,h2,h3,p,ul {
     padding: 0px;
     /* box-shadow: 5px 5px 10px rgba(0,0,0,0.38); */
     filter: drop-shadow(5px 5px 5px #6e6b6b);
-    margin: 1rem;
     font-size: 20px;
 }
 
