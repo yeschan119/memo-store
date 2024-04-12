@@ -9,8 +9,10 @@
 --color-black: rgb(0,0,0);
 --color-white: rgb(256, 256, 256);
 
---size-max-width : 490px;
---size-max-hight : 300px;
+--size-max-width : 450px;
+--size-max-height : 300px;
+--size-min-height : 270px;
+--size-min-width : 370px;
 }
 
 html {
@@ -26,20 +28,12 @@ h1,h2,h3,p,ul {
     margin: 0;
 }
 
-.header {
-    position: relative;
-    top: 70px;
-    display: flex;
-    justify-content: center;
-}
-
 .login-bg{
     width: 100%;
     height: 100%;
     position: fixed;
     background: var(--color-primary);
     z-index: 5;
-    padding: 30px;
     opacity: .9;
     visibility: visible;
     transition: all 0.5s;
@@ -128,16 +122,22 @@ h1,h2,h3,p,ul {
     font-size: 20px;
 }
 
+.header {
+    position: relative;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
 .search-title, .result-title {
     margin-bottom: 1rem;
 }
-.search {
+.search, .result {
     position: relative;
     top: 80px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+    min-width: 500px;
 }
 
 .search-title, .result-title {
@@ -148,7 +148,8 @@ h1,h2,h3,p,ul {
 .search-box {
     position: relative;
     height: 40px;
-    width: 460px;
+    width: 80%;
+    margin: 0 auto;
     background-color: var(--color-background);
     border-radius: 40px;
     padding: 10px;
@@ -168,13 +169,13 @@ h1,h2,h3,p,ul {
     color: var(--color-text);
     font-size: 20px;
     line-height: 40px;
-    width: 370px;
+    width: 80%;
 }
 
 .search-btn {
     color: var(--color-text);
     float: left;
-    width: 40px;
+    width: 8%;
     height: 100%;
     border-radius: 50%;
     background: var(--color-white);
@@ -185,8 +186,8 @@ h1,h2,h3,p,ul {
 
 .reset-btn {
     color: var(--color-primary);
-    float: left;
-    width: 40px;
+    float: right;
+    width: 8%;
     height: 100%;
     border-radius: 50%;
     background: var(--color-white);
@@ -195,17 +196,18 @@ h1,h2,h3,p,ul {
 }
 
 .autocomplete > div {
-    margin-left: .5rem;
     background: var(--color-background);
     padding: .2rem, .6rem;
     font-size: 1.2rem;
     padding: 7px;
+    margin: 0 auto;
     box-shadow: 4.0px 8.0px 8.0px rgba(0,0,0,0.38);
+    width: 62%;
 }
 
 .autocomplete > div.active {
-    margin-left: .5rem;
-    width: 370px;
+    margin: 0 auto;
+    width: 62.5%;
     background-color: var(--color-background);
     color: var(--color-text);
     border: .5px dotted var(--color-primary);
@@ -234,6 +236,20 @@ h1,h2,h3,p,ul {
     object-fit: cover;  /*찌그러진 이미지 원래 비율로 유지*/
 }
 
-img {
+.background-img img {
     filter: drop-shadow(15px 5px 6px #6e6b6b);
+}
+
+@media screen and (max-width: 768px) {
+    .login-id, .login-pw, .login-pw-btn {
+        font-size: 15px;
+        line-height: 40px;
+    }
+    .search-text, .result-id, .result-pw {
+        font-size: 15px;
+        line-height: 40px;
+    }
+    .search-btn, .reset-btn {
+        font-size: 15px;
+    }
 }

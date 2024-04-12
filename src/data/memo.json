@@ -51,13 +51,10 @@
     "kane" : ["꿍이!", "Rnddi!"],
 
 
-    "kokomo247 ms365" : ["Kane@kokomo247.com", "kokomo119!"],
-    "kokomo247 Azure Dev" : ["Kane@kokomo247.com", "kokomo119!"],
-    "kokomo247 AWS" : ["kane", "kokomo247aws119!"],
-    "kokomo247 chicago" : ["test20@kokomo247.com", "KkmR0cks!"],
-    "kokomo247 isp" : ["test5@kokomo247.com", "Hotdog123!"],
-    "kokomo247 rts ec2" : ["ec2-user", "ec2-3-87-105-139.compute-1.amazonaws.com"],
-    "kokomo247 rts host" : ["lausd-rts-prod-db-encrypt.cpxfrtgizjyy.us-east-1.rds.amazonaws.com", "kokomo247"],
-    "kokomo247 dev ec2" : ["ec2-user","ec2-3-87-105-139.compute-1.amazonaws.com"],
-    "kokomo247 dev host" : ["kokomo247-dev-db-encrypt.cpxfrtgizjyy.us-east-1.rds.amazonaws.com", "KkmPaper$!"]
+    "kokomo ms365" : ["Kane@kokomo247.com", "kokomo119!"],
+    "kokomo chicago" : ["test20@kokomo247.com", "KkmR0cks!"],
+    "kokomo isp" : ["test5@kokomo247.com", "Hotdog123!"],
+    "kokomo rts" : ["RTS", "kokomo247"],
+    "kokomo dev" : ["DEV","KkmPaper$!"],
+    "kokomo prod" : ["PROD", "Kokomo247!"]
 }
